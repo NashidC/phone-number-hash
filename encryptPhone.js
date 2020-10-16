@@ -6,3 +6,15 @@
 
 
 module.exports = encryptPhoneNumber;
+
+function encryptPhoneNumber(num) {
+  let splitNum = num.split("");
+  for (let i = 0; i <= 6; i++) {
+    if (splitNum[i] == "-") {
+    } else {
+      splitNum[i] = "*";
+    }
+  }
+  return splitNum.join("");
+}
+console.log(encryptPhoneNumber("646-749-9517"));
